@@ -1,21 +1,6 @@
 "use strict";
 
 /**
- * @name initHamburger
- * @description Init hamburger logic with animated
- */
-function initHamburger() {
-  var btn = document.querySelector("[hamburger-js]"),
-      sideBar = document.getElementById("sidebar");
-
-  btn.addEventListener("click", function (e) {
-    e.currentTarget.classList.toggle("is-active");
-
-    sideBar.classList.toggle("is-open");
-  });
-}
-
-/**
  * @name initBodyClickClosest
  * @description
  */
@@ -33,6 +18,21 @@ function initBodyClickClosest() {
         item.classList.remove("is-open");
       });
     }
+  });
+}
+
+/**
+ * @name initHamburger
+ * @description Init hamburger logic with animated
+ */
+function initHamburger() {
+  var btn = document.querySelector("[hamburger-js]"),
+      sideBar = document.getElementById("sidebar");
+
+  btn.addEventListener("click", function (e) {
+    e.currentTarget.classList.toggle("is-active");
+
+    sideBar.classList.toggle("is-open");
   });
 }
 
@@ -72,6 +72,22 @@ function initPreventBehavior() {
    * CALLBACK
    * =============================================
    */
+  var hoverMenuDropDown = function hoverMenuDropDown() {
+    var hoverElements = document.querySelectorAll(".headerDropdown");
+
+    hoverElements.forEach(function (val, idx) {
+      val.addEventListener("mouseover", function (e) {
+        var elem = e.currentTarget;
+
+        elem.querySelector(".headerDropdown__wrap").classList.add("is-open");
+      });
+      val.addEventListener("mouseout", function (e) {
+        var elem = e.currentTarget;
+
+        elem.querySelector(".headerDropdown__wrap").classList.remove("is-open");
+      });
+    });
+  };
 
   /**
    * =============================================
@@ -86,6 +102,8 @@ function initPreventBehavior() {
     initBodyClickClosest();
     initHamburger();
     // ...
+
+    hoverMenuDropDown();
   };
   initNative();
 })();
