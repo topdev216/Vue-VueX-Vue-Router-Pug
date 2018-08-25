@@ -72,6 +72,11 @@ function initPreventBehavior() {
    * CALLBACK
    * =============================================
    */
+
+  /**
+   * @name hoverMenuDropDown
+   * @callback
+   */
   var hoverMenuDropDown = function hoverMenuDropDown() {
     var hoverElements = document.querySelectorAll(".headerDropdown");
 
@@ -85,6 +90,45 @@ function initPreventBehavior() {
         var elem = e.currentTarget;
 
         elem.querySelector(".headerDropdown__wrap").classList.remove("is-open");
+      });
+    });
+  };
+
+  /**
+   * @name dashboardTabs
+   * @callback
+   */
+  var dashboardTabs = function dashboardTabs() {
+    var buttons = document.querySelectorAll(".dashboard__tabs");
+
+    buttons.forEach(function (val, idx) {
+      val.addEventListener("click", function (e) {
+        var _iteratorNormalCompletion = true;
+        var _didIteratorError = false;
+        var _iteratorError = undefined;
+
+        try {
+          for (var _iterator = buttons[Symbol.iterator](), _step; !(_iteratorNormalCompletion = (_step = _iterator.next()).done); _iteratorNormalCompletion = true) {
+            var elem = _step.value;
+
+            elem.classList.remove("is-active");
+          }
+        } catch (err) {
+          _didIteratorError = true;
+          _iteratorError = err;
+        } finally {
+          try {
+            if (!_iteratorNormalCompletion && _iterator.return) {
+              _iterator.return();
+            }
+          } finally {
+            if (_didIteratorError) {
+              throw _iteratorError;
+            }
+          }
+        }
+
+        e.currentTarget.classList.add("is-active");
       });
     });
   };
@@ -104,6 +148,7 @@ function initPreventBehavior() {
     // ...
 
     hoverMenuDropDown();
+    dashboardTabs();
   };
   initNative();
 })();
