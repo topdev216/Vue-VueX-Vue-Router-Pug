@@ -475,6 +475,13 @@ input[type="text"] {
   font-weight: 900;
 }
 
+@media screen and (max-width: 991px) {
+  
+  .title {
+    font-size: 35px;
+  }
+}
+
 @-webkit-keyframes fadeIn {
   from {
     opacity: 0;
@@ -948,6 +955,15 @@ input[type="text"] {
   -webkit-transition: color 0.3s ease-in-out;
   -o-transition: color 0.3s ease-in-out;
   transition: color 0.3s ease-in-out;
+}
+
+@media screen and (max-width: 991px) {
+  
+  .dashboard__tabs {
+    margin-left: 20px;
+    margin-right: 20px;
+    font-size: 14px;
+  }
 }
 
 
