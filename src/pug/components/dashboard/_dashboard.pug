@@ -1,0 +1,54 @@
+// DASHBORAD :: START
+
+
+-
+  var tabsData = [
+    {
+      href: "#",
+      name: "Weight"
+    },
+    {
+      href: "#",
+      name: "BMI"
+    },
+    {
+      href: "#",
+      name: "Engagement"
+    },
+    {
+      href: "#",
+      name: "Education"
+    },
+    {
+      href: "#",
+      name: "Well being"
+    },
+    {
+      href: "#",
+      name: "Feedback"
+    },
+    {
+      href: "#",
+      name: "Profile"
+    }
+  ];
+
+
+section#dashboard.dashboard
+  .c-grid
+
+    .dashboard__wrapper
+
+      h1.dashboard__title.title!= "Dashborad"
+
+      .dashboard__tabs-wrap
+        each val, idx in tabsData
+          a.dashboard__tabs(
+            href= tabsData[idx].href
+            title=""
+            class= (idx === 0) ? "is-active": ""
+          )!= tabsData[idx].name
+
+
+
+// DASHBORAD :: END

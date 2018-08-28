@@ -8,19 +8,11 @@
 _tmp/*
 node_modules/*
 vendor/*
-src/*
-gulp/*
+
 
 # FILES
 # ==========
 package-lock.json
-package.json
-yarn.lock
-gulpfile.js
-.bowerrc
-bower.json
-
-
 
 
 # EXTENSIONS

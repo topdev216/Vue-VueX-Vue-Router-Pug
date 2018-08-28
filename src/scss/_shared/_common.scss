@@ -1,0 +1,124 @@
+// COMMON :: START
+
+
+// header drop down
+.headerDropdown {
+  &__wrap {
+    display: none;
+    position: absolute;
+    top: 60px;
+    right: -25px;
+    min-width: 183px;
+
+
+    &.is-open {
+      display: block;
+      animation-duration: 0.5s;
+      animation-fill-mode: both;
+      animation-name: fadeIn;
+    }
+  }
+
+
+  &__corner {
+    z-index: 0;
+    position: absolute;
+    top: 13px;
+    right: 20px;
+    width: 19px;
+    height: 19px;
+    transform: rotate(45deg);
+    background-color: $c-white;
+    box-shadow: 0 0 30px 0 rgba($c-pattensBlue, 1);
+  }
+
+
+  &__cover {
+    margin-top: 20px;
+    width: 100%;
+    box-shadow: 0 0 30px 0 rgba($c-pattensBlue, 1);
+  }
+
+
+  &__box {
+    z-index: 1;
+    position: relative;
+    width: 100%;
+    min-height: 44px;
+    padding: 12px;
+    background-color: $c-white;
+  }
+
+
+  &__item {
+    &:last-child {
+      a {
+        border-bottom: none;
+      }
+    }
+  }
+
+
+  &__link {
+    display: flex;
+    align-items: center;
+    height: 44px;
+    padding-left: 12px;
+    border-bottom: 1px solid $c-aliceBlue;
+    color: $c-comet;
+    font-weight: 600;
+
+
+    &--badge {
+      justify-content: space-between;
+    }
+
+
+    sup {
+      display: inline-block;
+      top: 0;
+      border-radius: 50%;
+      line-height: 0;
+      border: 2px solid $c-white;
+      background-color: $c-monteCarlo;
+      color: $c-white;
+      font-size: 14px;
+      font-weight: bold;
+      @include transition(top, transform, right, border-color, background-color);
+
+
+      span {
+        display: inline-block;
+        padding-top: 50%;
+        padding-bottom: 50%;
+        margin-left: 7px;
+        margin-right: 7px;
+        line-height: 0;
+        @include transition(color);
+      }
+    }
+  }
+}
+// ===============
+
+
+// title
+.title {
+  padding-bottom: 28px;
+  color: $c-comet;
+  font-size: 42px;
+  font-weight: 900;
+  @include respond(max-medium) {
+    font-size: 35px;
+  }
+}
+// ===============
+
+
+@keyframes fadeIn {
+  from {opacity: 0;}
+  to {opacity: 1;}
+}
+
+
+// COMMON :: END

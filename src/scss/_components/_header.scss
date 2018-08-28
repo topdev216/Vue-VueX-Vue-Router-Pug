@@ -1,0 +1,45 @@
+// HEADER :: START
+
+.header {
+  z-index: 100;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 60px;
+
+
+  &__wrapper {
+    display: flex;
+    align-items: center;
+    height: 60px;
+    background-color: $c-comet;
+  }
+
+
+  &--left,
+  &--right {
+    display: flex;
+    align-items: center;
+    width: 50%;
+    height: 100%;
+  }
+
+
+  &--right {
+    justify-content: flex-end;
+  }
+
+
+  &--profile {
+    padding-left: 34px;
+    padding-right: 46px;
+  }
+
+
+  &--hamburger {
+    width: 65px;
+  }
+}
+
+// HEADER :: END
