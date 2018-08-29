@@ -1,7 +1,9 @@
 /* eslint-disable */
 require('./arrow')
 require('./call')
+require('./clock-small')
 require('./dashboard')
+require('./doc')
 require('./message')
 require('./program')
 require('./toolkit')
