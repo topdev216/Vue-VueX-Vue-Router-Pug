@@ -7,8 +7,10 @@
   &__tabs {
     position: relative;
     min-height: 32px;
-    margin-left: 37px;
-    margin-right: 37px;
+    margin-left: 32px;
+    margin-right: 32px;
+    padding-left: 5px;
+    padding-right: 5px;
     color: $c-spunPearl;
     font-size: 16px;
     font-weight: 600;
@@ -65,6 +67,31 @@
       min-height: 32px;
       margin-bottom: 36px;
       border-bottom: 1px solid $c-pattensBlue;
+    }
+
+
+    &-row {
+      display: flex;
+
+
+      .program__tabs-wrap {
+        padding-right: 30px;
+      }
+    }
+
+
+    &-btn {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 162px;
+      height: 28px;
+      margin-left: 53px;
+      border-radius: 3px;
+      background-color: $c-comet;
+      color: $c-white;
+      font-size: 14px;
+      font-weight: bold;
     }
   }
 
@@ -201,6 +228,50 @@
     &-text {
       padding-bottom: 28px;
       font-size: 14px;
+    }
+  }
+
+
+  &__btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    max-width: 198px;
+    height: 50px;
+    margin-bottom: 57px;
+    border-radius: 5px;
+    background-color: $c-monteCarlo;
+    color: $c-white;
+    font-size: 16px;
+    font-weight: bold;
+
+
+    &-1 {
+      margin-bottom: 0;
+    }
+  }
+
+
+  &__step {
+    &-field {
+      display: flex;
+      padding-bottom: 33px;
+    }
+
+
+    &-textarea {
+      outline: none;
+      resize: none;
+      width: 100%;
+      max-width: 910px;
+      min-height: 254px;
+      padding: 25px 35px;
+      border: 1px solid $c-pattensBlue;
+      line-height: 1.4;
+      color: $c-comet;
+      font-size: 14px;
+      font-family: "Lato", sans-serif;
     }
   }
 }

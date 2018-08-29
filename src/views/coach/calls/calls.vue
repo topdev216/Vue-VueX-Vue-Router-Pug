@@ -93,12 +93,12 @@
 </template>
 
 <script>
-  export default {
-    name: 'calls',
-    data() {
-      return {}
-    }
+export default {
+  name: 'calls',
+  data () {
+    return {}
   }
+}
 </script>
 
 <style scoped lang="scss">

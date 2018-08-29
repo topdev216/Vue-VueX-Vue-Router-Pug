@@ -26,7 +26,10 @@
         <div class="program__box">
           <div class="program__box-head">
             <p class="program__box-title">Goals & Intentios</p>
-            <a href="#" class="program__box-btn">Visit</a>
+
+            <router-link to="/program-inside">
+              <a class="program__box-btn">Visit</a>
+            </router-link>
           </div>
           <p class="program__box-text">It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English.</p>
         </div>
@@ -34,7 +37,10 @@
         <div class="program__box">
           <div class="program__box-head">
             <p class="program__box-title">Nutrition 101</p>
-            <a href="#" class="program__box-btn">Visit</a>
+
+            <router-link to="/program-inside">
+              <a class="program__box-btn">Visit</a>
+            </router-link>
           </div>
           <p class="program__box-text">It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English.</p>
         </div>
@@ -47,12 +53,12 @@
 </template>
 
 <script>
-  export default {
-    name: 'phase-4',
-    data() {
-      return {}
-    }
+export default {
+  name: 'phase-4',
+  data () {
+    return {}
   }
+}
 </script>
 
 <style scoped>

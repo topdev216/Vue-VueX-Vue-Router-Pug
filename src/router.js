@@ -102,6 +102,49 @@ export default new Router({
       ]
     },
     {
+      path: '/program-inside',
+      redirect: '/program-inside/step-1',
+      name: 'program-inside',
+      component: () => import('./views/coach/program/program-inside.vue'),
+      children: [
+        {
+          path: 'step-1',
+          name: 'step-1',
+          component: () => import('./views/coach/program/step-1.vue')
+        },
+        {
+          path: 'step-2',
+          name: 'step-2',
+          component: () => import('./views/coach/program/step-2.vue')
+        },
+        {
+          path: 'step-3',
+          name: 'step-3',
+          component: () => import('./views/coach/program/step-3.vue')
+        },
+        {
+          path: 'step-4',
+          name: 'step-4',
+          component: () => import('./views/coach/program/step-4.vue')
+        },
+        {
+          path: 'step-5',
+          name: 'step-5',
+          component: () => import('./views/coach/program/step-5.vue')
+        },
+        {
+          path: 'step-6',
+          name: 'step-6',
+          component: () => import('./views/coach/program/step-6.vue')
+        },
+        {
+          path: 'step-7',
+          name: 'step-7',
+          component: () => import('./views/coach/program/step-7.vue')
+        }
+      ]
+    },
+    {
       path: '/toolkit',
       name: 'toolkit',
       component: () => import('./views/coach/toolkit/toolkit.vue')

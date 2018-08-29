@@ -20,10 +20,10 @@
 </template>
 
 <script>
-  export default {
-    name: 'program',
-    data() {
-      return {}
-    }
+export default {
+  name: 'program',
+  data () {
+    return {}
   }
+}
 </script>
