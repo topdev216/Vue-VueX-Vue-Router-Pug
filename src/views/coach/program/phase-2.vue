@@ -47,12 +47,12 @@
 </template>
 
 <script>
-export default {
-  name: 'phase-2',
-  data () {
-    return {}
+  export default {
+    name: 'phase-2',
+    data() {
+      return {}
+    }
   }
-}
 </script>
 
 <style scoped>
