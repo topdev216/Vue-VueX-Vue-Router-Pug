@@ -171,6 +171,11 @@ export default new Router({
           component: () => import('./views/coach/toolkit/phase-4.vue')
         }
       ]
+    },
+    {
+      path: '/calendar',
+      name: 'calendar',
+      component: () => import('./views/coach/calendar/calendar.vue')
     }
   ]
 })
