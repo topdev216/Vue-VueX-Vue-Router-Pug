@@ -75,8 +75,31 @@ export default new Router({
     },
     {
       path: '/program',
+      redirect: '/program/phase-1',
       name: 'program',
-      component: () => import('./views/coach/program/program.vue')
+      component: () => import('./views/coach/program/program.vue'),
+      children: [
+        {
+          path: 'phase-1',
+          name: 'phase-1',
+          component: () => import('./views/coach/program/phase-1.vue')
+        },
+        {
+          path: 'phase-2',
+          name: 'phase-2',
+          component: () => import('./views/coach/program/phase-2.vue')
+        },
+        {
+          path: 'phase-3',
+          name: 'phase-3',
+          component: () => import('./views/coach/program/phase-3.vue')
+        },
+        {
+          path: 'phase-4',
+          name: 'phase-4',
+          component: () => import('./views/coach/program/phase-4.vue')
+        }
+      ]
     },
     {
       path: '/toolkit',
