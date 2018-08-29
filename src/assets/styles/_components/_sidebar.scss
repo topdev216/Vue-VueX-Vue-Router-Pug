@@ -113,7 +113,7 @@
 
 
     &:hover,
-    &.is-active {
+    .is-active & {
       background-color: $c-monteCarlo;
       @include transition(background-color);
 
