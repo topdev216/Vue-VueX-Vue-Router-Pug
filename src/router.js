@@ -146,8 +146,31 @@ export default new Router({
     },
     {
       path: '/toolkit',
+      redirect: '/toolkit/phase-1',
       name: 'toolkit',
-      component: () => import('./views/coach/toolkit/toolkit.vue')
+      component: () => import('./views/coach/toolkit/toolkit.vue'),
+      children: [
+        {
+          path: 'phase-1',
+          name: 'phase-1',
+          component: () => import('./views/coach/toolkit/phase-1.vue')
+        },
+        {
+          path: 'phase-2',
+          name: 'phase-2',
+          component: () => import('./views/coach/toolkit/phase-2.vue')
+        },
+        {
+          path: 'phase-3',
+          name: 'phase-3',
+          component: () => import('./views/coach/toolkit/phase-3.vue')
+        },
+        {
+          path: 'phase-4',
+          name: 'phase-4',
+          component: () => import('./views/coach/toolkit/phase-4.vue')
+        }
+      ]
     }
   ]
 })

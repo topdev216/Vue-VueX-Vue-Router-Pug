@@ -1,5 +1,5 @@
 <template>
-  <div class="program__row"></div>
+  <div class="toolkit__row"></div>
 </template>
 
 <script>
@@ -10,7 +10,3 @@ export default {
   }
 }
 </script>
-
-<style scoped>
-
-</style>
