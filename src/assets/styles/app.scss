@@ -39,16 +39,14 @@
 @import "_components/sidebar";
 //@import "_components/footer";
 
-@import "_components/dashboard/dashboard";
+// COACHING
+@import "_components/coaching/dashboard/dashboard";
+@import "_components/coaching/coaching-calls/calls";
+@import "_components/coaching/program/program";
+@import "_components/coaching/toolkit/toolkit";
+@import "_components/coaching/calendar/calendar";
+@import "_components/coaching/messages/messages";
+@import "_components/coaching/profile/profile";
+@import "_components/coaching/wall/wall";
 
-@import "_components/coaching-calls/calls";
-
-@import "_components/program/program";
-
-@import "_components/toolkit/toolkit";
-
-@import "_components/calendar/calendar";
-
-@import "_components/messages/messages";
-
-@import "_components/profile/profile";
+// CLIENT

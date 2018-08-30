@@ -3,6 +3,7 @@
   <div class="c-grid">
     <div class="wall__wrapper">
       <h1 class="wall__title title">Wall</h1>
+      <a href="#" class="wall__btn">Compose new post</a>
     </div>
   </div>
 </section>

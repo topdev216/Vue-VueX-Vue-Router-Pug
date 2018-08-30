@@ -74,6 +74,16 @@ export default new Router({
       component: () => import('./views/coach/wall/wall.vue')
     },
     {
+      path: '/wall-create',
+      name: 'wall-create',
+      component: () => import('./views/coach/wall/wall-create.vue')
+    },
+    {
+      path: '/wall-edit',
+      name: 'wall-edit',
+      component: () => import('./views/coach/wall/wall-edit.vue')
+    },
+    {
       path: '/program',
       redirect: '/program/phase-1',
       name: 'program',
