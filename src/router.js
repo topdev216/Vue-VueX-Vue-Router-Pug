@@ -176,6 +176,24 @@ export default new Router({
       path: '/calendar',
       name: 'calendar',
       component: () => import('./views/coach/calendar/calendar.vue')
+    },
+    {
+      path: '/profile',
+      redirect: '/profile/editProfile',
+      name: 'profile',
+      component: () => import('./views/coach/profile/profile.vue'),
+      children: [
+        {
+          path: 'editProfile',
+          name: 'editProfile',
+          component: () => import('./views/coach/profile/editProfile.vue')
+        },
+        {
+          path: 'changePassword',
+          name: 'changePassword',
+          component: () => import('./views/coach/profile/changePassword.vue')
+        }
+      ]
     }
   ]
 })
