@@ -1,5 +1,5 @@
 <template>
-  <div class="profile__row">
+  <div>
 
     <div class="profile__change">
 

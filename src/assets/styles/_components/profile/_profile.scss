@@ -102,15 +102,130 @@
     padding: 28px 35px;
     border-radius: 5px;
     background-color: $c-white;
+    border: 1px solid $c-aliceBlue;
     box-shadow: 0 3px 10px rgba($c-greyChateau, 0.16);
   }
 
 
+  &__edit {
+    display: flex;
+
+
+    &-left {
+      width: 189px;
+      padding-right: 25px;
+
+
+      > div {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 164px;
+        height: 164px;
+        margin-bottom: 9px;
+        border-radius: 5px;
+        border: 1px solid $c-aliceBlue;
+        box-shadow: 0 3px 10px rgba($c-greyChateau, 0.16);
+      }
+    }
+
+
+    &-right {
+      width: calc(100% - 189px);
+
+
+      > div {
+        padding: 28px 35px;
+        border: 1px solid $c-aliceBlue;
+        box-shadow: 0 3px 10px rgba($c-greyChateau, 0.16);
+      }
+    }
+
+
+    &-img {
+      overflow: hidden;
+      position: relative;
+      width: 114px;
+      height: 114px;
+      border-radius: 100%;
+
+
+      img {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: center;
+      }
+    }
+
+
+    &-btn {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 100%;
+      height: 28px;
+      border-radius: 3px;
+      color: $c-white;
+      font-size: 14px;
+      font-weight: bold;
+
+
+      &--edit {
+        margin-bottom: 6px;
+        background-color: $c-comet;
+      }
+      &--save {
+        background-color: $c-monteCarlo;
+      }
+    }
+  }
+
+
   &__form {
+    &-wrap {
+      display: flex;
+      justify-content: space-between;
+      @include respond(max-medium) {
+        flex-wrap: wrap;
+      }
+
+
+      .profile__form--left,
+      .profile__form--right {
+        width: 380px;
+        @include respond(max-medium) {
+          width: 100%;
+        }
+      }
+      .profile__form--left {
+        @include respond(large) {
+          margin-right: 15px;
+        }
+      }
+      .profile__form--right {
+        @include respond(large) {
+          margin-left: 15px;
+        }
+      }
+    }
+
+
     &-field {
       width: 100%;
       max-width: 380px;
       padding-bottom: 20px;
+      @include respond(max-medium) {
+        max-width: 100%;
+      }
+
+
+      &--textarea {
+        max-width: 100%;
+      }
 
 
       &--btn {
@@ -122,8 +237,10 @@
         .profile__form-label {
           color: $c-danger;
         }
-        .profile__form-input {
-          input {
+        .profile__form-input,
+        .profile__form-textarea {
+          input,
+          textarea {
             border-color: $c-danger;
             color: $c-danger;
           }
@@ -140,37 +257,85 @@
       font-size: 14px;
       font-weight: bold;
       padding-bottom: 11px;
+
+
+      &--wrap {
+        display: flex;
+        justify-content: space-between;
+      }
     }
 
 
-    &-input {
+    &-link {
+      color: $c-monteCarlo;
+      font-size: 14px;
+      font-weight: bold;
+    }
+
+
+    &-input,
+    &-textarea {
       position: relative;
       width: 100%;
-      height: 36px;
 
 
-
-      input {
+      input,
+      textarea {
         outline: none;
         position: absolute;
         top: 0;
         left: 0;
         width: 100%;
         height: 100%;
-        padding: 0 15px;
         border-radius: 3px;
         border: 1px solid $c-pattensBlue;
+        color: $c-comet;
+        font-size: 14px;
+        font-weight: bold;
+        @include input-placeholder {
+          color: rgba($c-comet, 0.5);
+        }
       }
 
 
       span {
         display: none;
         position: absolute;
-        top: 36px;
         left: 0;
         font-size: 11px;
         font-weight: bold;
         color: $c-danger;
+      }
+    }
+
+
+    &-input {
+      height: 36px;
+
+
+      input {
+        padding: 0 15px;
+      }
+
+
+      span {
+        top: 36px;
+      }
+    }
+
+
+    &-textarea {
+      height: 116px;
+
+
+      textarea {
+        resize: none;
+        padding: 8px 15px;
+      }
+
+
+      span {
+        top: 116px;
       }
     }
 
