@@ -6,7 +6,6 @@
       <a href="#" class="wall__btn">Send post</a>
     </div>
 
-
     <div class="wall__createEdit">
       <div class="wall__createEdit-left">
 

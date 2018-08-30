@@ -136,7 +136,6 @@
 
             </div>
 
-
             <div class="messages__chat-box--body">
 
               <div class="messages__chat-text">
@@ -232,7 +231,6 @@
               </div>
 
             </div>
-
 
             <div class="messages__chat-box--footer">
 

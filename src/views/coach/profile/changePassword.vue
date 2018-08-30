@@ -29,7 +29,6 @@
           </div>
         </div>
 
-
         <div class="profile__form-field profile__form-field--btn">
           <button type="submit" class="profile__form-btn">Change password</button>
         </div>

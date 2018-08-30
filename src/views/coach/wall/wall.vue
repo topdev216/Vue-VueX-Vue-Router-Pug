@@ -424,7 +424,6 @@
 
           </div>
 
-
         </div>
 
       </div>
@@ -434,12 +433,12 @@
 </template>
 
 <script>
-  export default {
-    name: 'wall',
-    data() {
-      return {}
-    }
+export default {
+  name: 'wall',
+  data () {
+    return {}
   }
+}
 </script>
 
 <style scoped lang="scss">
