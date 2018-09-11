@@ -17,15 +17,27 @@
       margin-right: 20px;
       font-size: 14px;
     }
+    @include respond(max-small) {
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+      min-height: 40px;
+      margin-left: 15px;
+      margin-right: 0;
+    }
 
 
     &:first-child {
-      margin-left: 0;
+      @include respond(medium) {
+        margin-left: 0;
+      }
     }
 
 
     &:last-child {
-      margin-right: 0;
+      @include respond(medium) {
+        margin-right: 0;
+      }
     }
 
 
@@ -61,9 +73,14 @@
 
     &-wrap {
       display: flex;
+      width: 100%;
       min-height: 32px;
       margin-bottom: 36px;
       border-bottom: 1px solid $c-pattensBlue;
+      @include respond(max-small) {
+        flex-direction: column;
+        border-bottom: none;
+      }
     }
   }
 }
