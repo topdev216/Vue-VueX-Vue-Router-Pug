@@ -133,8 +133,11 @@
 
   &__row {
     display: flex;
-    width: 1080px;
+    width: 100%;
     max-width: 1080px;
+    @include respond(max-medium) {
+      width: 1080px;
+    }
   }
 
 

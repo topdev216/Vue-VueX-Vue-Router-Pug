@@ -43,12 +43,12 @@
         </div>
       </div>
       <div class="header--profile">
-        <div class="profileHeader headerDropdown"><a class="profileHeader__btn" href="#" title="">
+        <div class="profileHeader headerDropdown">
+          <a class="profileHeader__btn" href="#" title="">
             <div><img src="@/assets/img/img-profileHeader.jpg" srcset="@/assets/img/img-profileHeader@2x.jpg 2x" alt="" title=""></div>
             <p>Christian Vizcarra</p>
-            <svg class="icon icon-i-arrow ">
-              <use xlink:href="./img/sprite.svg#i-arrow"></use>
-            </svg></a>
+            <svgicon class="icon icon-i-arrow" name="arrow"></svgicon>
+        </a>
           <div class="profileHeader__dropdown headerDropdown__wrap">
             <div class="headerDropdown__cover">
               <div class="headerDropdown__corner"></div>
